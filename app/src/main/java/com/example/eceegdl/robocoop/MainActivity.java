@@ -52,6 +52,11 @@ public class MainActivity extends AppCompatActivity {
                         // Identify the connection to the Arduino
                         m_arduino_device = null;
                         BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
+                        if (adapter == null) {
+                            mySnackbar = Snackbar.make(coordinatorLayout, R.string.error_bluetooth_not_enabled , Snackbar.LENGTH_INDEFINITE);
+                            mySnackbar.show();
+                            return;
+                        }
                         if (adapter.isEnabled()) {
                             String listdevices = "";
                             Set<BluetoothDevice> pairedDevices = adapter.getBondedDevices();
