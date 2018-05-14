@@ -8,10 +8,12 @@
     <string name="closing_time_text">Heure de fermeture :  sunset + offset (tbd) </string>
     <string name="opening_time_text">Heure d´ouverture : 9h</string>
     <string name="error_text_arduino_not_found">Je n´ai pas trouvée le dispositif</string>
-    <string name="bluetooth_connection_success">connexion bluetooth réussie</string>
-    <string name="bluetooth_connection_failed">la connexion Bluetooth a échoué</string>
-    <string name="bluetooth_not_enabled">bluetooth n\'est pas activé</string>
-    <string name="connect_to_bluetooth_first">\"Yeux roulants .. Connectez-vous à Bluetooth d\'abord\"</string>
-    <string name="changes_sent_to_robocoop">Modifications envoyées à Robocoop.</string>
+    <string name="error_bluetooth_connection_failed">la connexion Bluetooth a échoué</string>
+    <string name="error_bluetooth_not_enabled">bluetooth n\'est pas activé</string>
+    <string name="error_connect_to_bluetooth_first">\"Yeux roulants .. Connectez-vous à Bluetooth d\'abord\"</string>
     <string name="error_connecting_to_robocoop">erreur se connectant à Robocoop</string>
+    <string name="error_command">erreur renvoyée par l\'appareil</string>
+    <string name="response_changes_sent_to_robocoop">Modifications envoyées à Robocoop.</string>
+    <string name="response_bluetooth_connection_success">connexion bluetooth réussie</string>
+
 </resources>
