@@ -59,21 +59,21 @@ public class MainActivity extends AppCompatActivity {
                                     m_arduino_device = device;
                             }
                             if (m_arduino_device == null) {
-                                mySnackbar = Snackbar.make(coordinatorLayout, "Arduino device not found. List of devices: " + listdevices, Snackbar.LENGTH_INDEFINITE);
+                                mySnackbar = Snackbar.make(coordinatorLayout,  R.string.error_text_arduino_not_found  + listdevices, Snackbar.LENGTH_INDEFINITE);
                                 mySnackbar.show();
                                 return ;
                             }
                             try {
                                 socket = m_arduino_device.createRfcommSocketToServiceRecord(m_uuid);
                                 socket.connect();
-                                mySnackbar = Snackbar.make(coordinatorLayout, "Bluetooth connection success. ", Snackbar.LENGTH_INDEFINITE);
+                                mySnackbar = Snackbar.make(coordinatorLayout, R.string.bluetooth_connection_success, Snackbar.LENGTH_INDEFINITE);
                                 mySnackbar.show();
 
                                 // connected. get sunset
                                 String sunset = "19";
 
                             } catch (IOException e) {
-                                 mySnackbar = Snackbar.make(coordinatorLayout, "Bluetooth connection failed. ", Snackbar.LENGTH_INDEFINITE);
+                                 mySnackbar = Snackbar.make(coordinatorLayout, R.string.bluetooth_connection_failed, Snackbar.LENGTH_INDEFINITE);
                                 mySnackbar.show();
                                 e.printStackTrace();
                             }
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                         else
                         {
                              mySnackbar = Snackbar.make(coordinatorLayout,
-                                    "Bluetooth is not enabled!", Snackbar.LENGTH_LONG);
+                                    R.string.bluetooth_not_enabled, Snackbar.LENGTH_LONG);
                             return ;
                         }
 
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                         // Send command to arduino
                         if (m_arduino_device == null) {
                             Snackbar mySnackbar =
-                                    Snackbar.make(coordinatorLayout, "Rolling eyes.. Connect to bluetooth first", Snackbar.LENGTH_INDEFINITE);
+                                    Snackbar.make(coordinatorLayout, R.string.connect_to_bluetooth_first, Snackbar.LENGTH_INDEFINITE);
                             mySnackbar.show();
                             return;
                         }
@@ -125,13 +125,13 @@ public class MainActivity extends AppCompatActivity {
                             String result = new String(buffer, 0, bytes);
                             socket.close();
                             Snackbar mySnackbar =
-                                    Snackbar.make(coordinatorLayout, "Changes sent to Robocoop. Result: "+result,Snackbar.LENGTH_INDEFINITE);
+                                    Snackbar.make(coordinatorLayout, R.string.changes_sent_to_robocoop +result,Snackbar.LENGTH_INDEFINITE);
                             mySnackbar.show();
                         }
                         catch (Exception e)
                         {
                             Snackbar mySnackbar =
-                                    Snackbar.make(coordinatorLayout, "Error connecting to Arduino!", Snackbar.LENGTH_INDEFINITE);
+                                    Snackbar.make(coordinatorLayout, R.string.error_connecting_to_robocoop, Snackbar.LENGTH_INDEFINITE);
                             mySnackbar.show();
                         }
                         break;
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
                         {   if (m_arduino_device == null)
                         {
                             Snackbar mySnackbar =
-                                    Snackbar.make(coordinatorLayout, "Rolling eyes.. Connect to bluetooth first", Snackbar.LENGTH_INDEFINITE);
+                                    Snackbar.make(coordinatorLayout, R.string.connect_to_bluetooth_first, Snackbar.LENGTH_INDEFINITE);
                             mySnackbar.show();
                             return ;
                         }   else {
@@ -169,14 +169,14 @@ public class MainActivity extends AppCompatActivity {
                             String result = new String(buffer, 0, bytes);
                             socket.close();
                             Snackbar mySnackbar =
-                                    Snackbar.make(coordinatorLayout, "Open command sent to Robocoop. Result: "+result,Snackbar.LENGTH_INDEFINITE);
+                                    Snackbar.make(coordinatorLayout, R.string.changes_sent_to_robocoop+result,Snackbar.LENGTH_INDEFINITE);
                             mySnackbar.show();
                         }
                         }
                         catch (Exception e)
                         {
                             Snackbar mySnackbar =
-                                    Snackbar.make(coordinatorLayout, "Error connecting to Arduino!", Snackbar.LENGTH_INDEFINITE);
+                                    Snackbar.make(coordinatorLayout, R.string.error_connecting_to_robocoop, Snackbar.LENGTH_INDEFINITE);
                             mySnackbar.show();
                         }
                         break;
@@ -199,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
                         {   if (m_arduino_device == null)
                         {
                             Snackbar mySnackbar =
-                                    Snackbar.make(coordinatorLayout, "Rolling eyes.. Connect to bluetooth first", Snackbar.LENGTH_INDEFINITE);
+                                    Snackbar.make(coordinatorLayout, R.string.connect_to_bluetooth_first, Snackbar.LENGTH_INDEFINITE);
                             mySnackbar.show();
                             return ;
                         }   else {
@@ -218,14 +218,14 @@ public class MainActivity extends AppCompatActivity {
                             socket.close();
 
                             Snackbar mySnackbar =
-                                    Snackbar.make(coordinatorLayout, "Close command sent to Robocoop. Result: " + result,Snackbar.LENGTH_INDEFINITE);
+                                    Snackbar.make(coordinatorLayout, R.string.changes_sent_to_robocoop + result,Snackbar.LENGTH_INDEFINITE);
                             mySnackbar.show();
                         }
                         }
                         catch (Exception e)
                         {
                             Snackbar mySnackbar =
-                                    Snackbar.make(coordinatorLayout, "Error connecting to Arduino!", Snackbar.LENGTH_INDEFINITE);
+                                    Snackbar.make(coordinatorLayout, R.string.error_connecting_to_robocoop, Snackbar.LENGTH_INDEFINITE);
                             mySnackbar.show();
                         }
                         break;
