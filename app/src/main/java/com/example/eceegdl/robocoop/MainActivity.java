@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                         BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
                         if (adapter == null) {
                             mySnackbar = Snackbar.make(coordinatorLayout, R.string.error_bluetooth_not_enabled , Snackbar.LENGTH_INDEFINITE);
-                            mySnackbar.show();
+                            mySnackbar.show(); 
                             return;
                         }
                         if (adapter.isEnabled()) {
