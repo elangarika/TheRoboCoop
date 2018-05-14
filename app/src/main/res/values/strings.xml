@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RoboCoop</string>
+    <string name="connection_button_text">Connection</string>
+    <string name="sunset_text">Aujourd\'hui heure de coucher de soleil : XXX</string>
+    <string name="offset_text">Délais (minutes) :</string>
+    <string name="arduino_time_text">RoboCoop time YYYY MM DD HH mm SS</string>
+    <string name="robocoop_version">RoboCoop Version 1.0</string>
+    <string name="closing_time_text">Heure de fermeture :  sunset + offset (tbd) </string>
+    <string name="opening_time_text">Heure d´ouverture : 9h</string>
+</resources>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/myCoordinatorLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android" />
+
+    <LinearLayout
+
+        android:id="@+id/main_square_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="top|center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/chicken_image_id"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="Logo"
+            android:gravity="top|center"
+            android:textColor="@color/colorB"
+            app:srcCompat="@mipmap/chicken" />
+
+        <Switch
+            android:id="@+id/switch_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:showText="true"
+            android:splitTrack="false"
+            android:textAllCaps="true"
+            android:text="@string/connection_button_text"
+            tools:checked="false"
+            android:textColor="@color/colorB"
+            tools:layout_width="match_parent" />
+
+
+        <TextView
+            android:id="@+id/sunset_text_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingTop="50dp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorB"
+            android:text="@string/sunset_text" />
+
+
+        <TextView
+            android:id="@+id/offset_text_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="50dp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorB"
+            android:text="@string/offset_text" />
+
+
+        <EditText
+            android:id="@+id/offset_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:textAllCaps="true"
+            android:textColor="@color/colorB"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/arduino_opening_text_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorB"
+            android:text="@string/opening_time_text" />
+
+
+        <TextView
+            android:id="@+id/arduino_closing_time_text_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorB"
+            android:text="@string/closing_time_text" />
+
+        <TextView
+            android:id="@+id/arduino_time_text_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:textAllCaps="true"
+            android:textColor="@color/colorB"
+            android:text="@string/arduino_time_text" />
+
+
+        <EditText
+            android:id="@+id/arduino_time_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="datetime"
+            android:maxLines="1"
+            android:textAllCaps="true"
+            android:textColor="@color/colorB"
+            android:text="" />
+
+        <Button
+            android:id="@+id/button_save_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:text="Appliquer" />
+    <LinearLayout
+
+        android:id="@+id/main_square2_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="top|center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/button_open_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorL"
+            android:text="Ouvrir" />
+
+
+        <Button
+            android:id="@+id/button_close_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorL"
+            android:text="Fermer" />
+
+    </LinearLayout>
+        <TextView
+            android:id="@+id/robocoop_version_text_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="130dp"
+            android:text="@string/robocoop_version"
+            android:textColor="@color/colorB" />
+
+
+    </LinearLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
