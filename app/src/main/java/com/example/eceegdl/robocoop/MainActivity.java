@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private BluetoothDevice m_arduino_device;
     private static UUID m_uuid = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     private CoordinatorLayout coordinatorLayout = null;
-    private String m_arduino_device_name = "HC-05";
+    //private String m_arduino_device_name = "HC-05";
+    private String m_arduino_device_name = "Robocoop";
     private BluetoothSocket socket;
     private Snackbar mySnackbar;
 
@@ -54,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                         BluetoothAdapter adapter = BluetoothAdapter.getDefaultAdapter();
                         if (adapter == null) {
                             mySnackbar = Snackbar.make(coordinatorLayout, R.string.error_bluetooth_not_enabled , Snackbar.LENGTH_INDEFINITE);
-                            mySnackbar.show(); 
+                            mySnackbar.show();
                             return;
                         }
                         if (adapter.isEnabled()) {
